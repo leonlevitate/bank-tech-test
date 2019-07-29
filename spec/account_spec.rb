@@ -20,6 +20,14 @@ RSpec.describe Account do
     account.debit(500)
     expect(account.display).to eq(1500)
   end
+
+  it 'stores all transactions and records date' do
+    account.credit(200)
+    account.debit(100)
+    account.credit(500)
+    account.debit(50)
+    expect(account.statement.length).to eq(8)
+  end
   # Given a client makes a deposit of 1000 on 10-01-2012
   # And a deposit of 2000 on 13-01-2012
   # And a withdrawal of 500 on 14-01-2012
