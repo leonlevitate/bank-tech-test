@@ -7,6 +7,13 @@ RSpec.describe Account do
     account = Account.new
     account.credit(2000)
     expect(account.balance).to eq(2000)
+  end
+
+  it 'decreases the balance when a withdrawal is made' do
+    account = Account.new
+    account.debit(500)
+    expect(account.balance).to eq(-500)
+  end
   # Given a client makes a deposit of 1000 on 10-01-2012
   # And a deposit of 2000 on 13-01-2012
   # And a withdrawal of 500 on 14-01-2012
@@ -17,6 +24,4 @@ RSpec.describe Account do
   # 14/01/2012 || || 500.00 || 2500.00
   # 13/01/2012 || 2000.00 || || 3000.00
   # 10/01/2012 || 1000.00 || || 1000.00
-
-  end
 end

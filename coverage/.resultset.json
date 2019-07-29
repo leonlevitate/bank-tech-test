@@ -13,6 +13,11 @@
         1,
         null,
         null,
+        1,
+        1,
+        1,
+        1,
+        null,
         null,
         null,
         null,
@@ -27,8 +32,11 @@
       ],
       "/Users/leonlinton/Desktop/Projects/bank-tech-test/lib/account.rb": [
         1,
+        1,
         null,
         1,
+        2,
+        null,
         null,
         1,
         1,
@@ -40,6 +48,6 @@
         null
       ]
     },
-    "timestamp": 1564397562
+    "timestamp": 1564398269
   }
 }
