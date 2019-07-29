@@ -3,14 +3,14 @@
 require 'account'
 
 RSpec.describe Account do
+  let(:account) { Account.new }
+
   it 'increases the balance when a deposit is made' do
-    account = Account.new
     account.credit(2000)
     expect(account.balance).to eq(2000)
   end
 
   it 'decreases the balance when a withdrawal is made' do
-    account = Account.new
     account.debit(500)
     expect(account.balance).to eq(-500)
   end
