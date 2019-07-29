@@ -1,0 +1,31 @@
+{
+  "RSpec": {
+    "coverage": {
+      "/Users/leonlinton/Desktop/Projects/bank-tech-test/spec/account_spec.rb": [
+        null,
+        null,
+        1,
+        null,
+        1,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null
+      ],
+      "/Users/leonlinton/Desktop/Projects/bank-tech-test/lib/account.rb": [
+
+      ]
+    },
+    "timestamp": 1564396810
+  }
+}
