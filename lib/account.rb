@@ -22,14 +22,7 @@ class Account
                     balance: @balance }
   end
 
-  def display
-    @statement << @balance
-    @statement.last
-  end
-
   def date_of_transaction
     Time.now.strftime('%d/%m/%Y')
   end
-
 end
-
