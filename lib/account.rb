@@ -6,14 +6,14 @@ class Account
     @statement = []
   end
 
-  def credit(cash, date = date_of_transaction)
-    @balance += cash
-    @statement.push(cash, date_of_transaction)
+  def credit(deposit, date = date_of_transaction)
+    @balance += deposit
+    @statement.push(deposit, date_of_transaction)
   end
 
-  def debit(cash, date = date_of_transaction)
-    @balance -= cash
-    @statement.push(cash, date_of_transaction)
+  def debit(withdrawal, date = date_of_transaction)
+    @balance -= withdrawal
+    @statement.push(withdrawal, date_of_transaction)
   end
 
   def display
@@ -22,7 +22,7 @@ class Account
   end
 
   def date_of_transaction
-    Time.now
+    Time.now.strftime("%d/%m/%Y")
   end
 
 end
