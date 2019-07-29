@@ -1,4 +1,4 @@
-# frozen_string_literal: true
+#frozen_string_literal: true
 
 require 'account'
 
@@ -15,12 +15,6 @@ RSpec.describe Account do
     expect(account.balance).to eq(-500)
   end
 
-  it 'prints a bank statement' do
-    account.credit(2000)
-    account.debit(500)
-    expect(account.display).to eq(1500)
-  end
-
   it 'stores all transactions and records date' do
     account.credit(200)
     account.debit(100)
@@ -28,14 +22,4 @@ RSpec.describe Account do
     account.debit(50)
     expect(account.statement.length).to eq(4)
   end
-  # Given a client makes a deposit of 1000 on 10-01-2012
-  # And a deposit of 2000 on 13-01-2012
-  # And a withdrawal of 500 on 14-01-2012
-  # When she prints her bank statement
-  # Then she would see
-
-  # date || credit || debit || balance
-  # 14/01/2012 || || 500.00 || 2500.00
-  # 13/01/2012 || 2000.00 || || 3000.00
-  # 10/01/2012 || 1000.00 || || 1000.00
 end
