@@ -26,7 +26,7 @@ RSpec.describe Account do
     account.debit(100)
     account.credit(500)
     account.debit(50)
-    expect(account.statement.length).to eq(8)
+    expect(account.statement.length).to eq(4)
   end
   # Given a client makes a deposit of 1000 on 10-01-2012
   # And a deposit of 2000 on 13-01-2012

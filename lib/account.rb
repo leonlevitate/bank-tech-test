@@ -8,21 +8,27 @@ class Account
 
   def credit(deposit, date = date_of_transaction)
     @balance += deposit
-    @statement.push(deposit, date_of_transaction)
+    @statement << { date: date,
+                    credit: deposit,
+                    debit: nil,
+                    balance: @balance }
   end
 
   def debit(withdrawal, date = date_of_transaction)
     @balance -= withdrawal
-    @statement.push(withdrawal, date_of_transaction)
+    @statement << { date: date,
+                    credit: nil,
+                    debit: withdrawal,
+                    balance: @balance }
   end
 
   def display
     @statement << @balance
-    p @statement.last
+    @statement.last
   end
 
   def date_of_transaction
-    Time.now.strftime("%d/%m/%Y")
+    Time.now.strftime('%d/%m/%Y')
   end
 
 end
