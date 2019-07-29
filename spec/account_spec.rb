@@ -14,6 +14,12 @@ RSpec.describe Account do
     account.debit(500)
     expect(account.balance).to eq(-500)
   end
+
+  it 'prints a bank statement' do
+    account.credit(2000)
+    account.debit(500)
+    expect(account.display).to eq(1500)
+  end
   # Given a client makes a deposit of 1000 on 10-01-2012
   # And a deposit of 2000 on 13-01-2012
   # And a withdrawal of 500 on 14-01-2012
