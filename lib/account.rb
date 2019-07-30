@@ -9,17 +9,17 @@ class Account
   def credit(deposit, date = date_of_transaction)
     @balance += deposit
     @statement << { date: date,
-                    credit: deposit,
+                    credit: deposit.to_f,
                     debit: nil,
-                    balance: @balance }
+                    balance: @balance.to_f }
   end
 
   def debit(withdrawal, date = date_of_transaction)
     @balance -= withdrawal
     @statement << { date: date,
                     credit: nil,
-                    debit: withdrawal,
-                    balance: @balance }
+                    debit: withdrawal.to_f,
+                    balance: @balance.to_f }
   end
 
   def date_of_transaction
