@@ -28,11 +28,16 @@ date || credit || debit || balance
 * `account.credit(1000)` - deposits account with £1000
 * `account.credit(2000)` - deposits account with £2000
 * `account.debit(500)` - withdraws account with £500
-* `account.view_statement` - displays account statement with date, amount & balance) (inverse chronological order)
+* `account.print_statement` - displays account statement with date, amount & balance) (inverse chronological order)
 
 ### How to run tests
 
 * rspec
 
+### Approach
+
+I created two main classes to separate the concerns. The Account class handles the deposit and withdrawal methods. The BankStatement class generates the statement, with the required output formatting.
+
 ### Screenshot of program
-![alt text](screenshot/screenshot.png?raw=true"screenshot")
+![alt text](screenshot/bankscreenshot.png?raw=true"screenshot")
+
