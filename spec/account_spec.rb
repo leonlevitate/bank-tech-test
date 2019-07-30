@@ -1,9 +1,19 @@
-#frozen_string_literal: true
+# frozen_string_literal: true
 
 require 'account'
 
 RSpec.describe Account do
   let(:account) { Account.new }
+
+  it 'displays statement of multiple transactions' do
+    account.credit(2000)
+    account.debit(100)
+    account.credit(400)
+
+    expect(account.view_statement).to eq [{ date: '30/07/2019', credit: 2000, debit: nil, balance: 2000 },
+                                          { date: '30/07/2019', credit: nil, debit: 100, balance: 1900 },
+                                          { date: '30/07/2019', credit: 400, debit: nil, balance: 2300 }]
+  end
 
   it 'increases the balance when a deposit is made' do
     account.credit(2000)
