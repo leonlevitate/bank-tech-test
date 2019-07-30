@@ -28,7 +28,7 @@ class Account
     bank_statement.create_statement(@statement)
   end
 
-private
+  private
 
   def date_of_transaction
     Time.now.strftime('%d/%m/%Y')

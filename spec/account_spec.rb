@@ -27,5 +27,5 @@ RSpec.describe Account do
   it 'prints a bank statement' do
     expect(account).to receive(:print_statement)
     account.print_statement
-   end
+  end
 end
