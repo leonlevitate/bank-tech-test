@@ -1,3 +1,5 @@
+require_relative 'bank_statement'
+
 class Account
   attr_reader :balance, :statement
 
@@ -22,15 +24,12 @@ class Account
                     balance: @balance.to_f }
   end
 
-  def view_statement
-    puts 'date || credit || debit || balance'
-    @statement.reverse_each do |item|
-      puts "#{item[:date]} || #{item[:credit]} || #{item[:debit]} || #{item[:balance]}"
-    end
+  def print_statement(bank_statement = BankStatement.new)
+    bank_statement.create_statement(@statement)
   end
 
 private
-  
+
   def date_of_transaction
     Time.now.strftime('%d/%m/%Y')
   end
