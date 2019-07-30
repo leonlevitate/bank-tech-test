@@ -1,5 +1,3 @@
-require_relative './bank_statement.rb'
-
 class Account
   attr_reader :balance, :statement
 
