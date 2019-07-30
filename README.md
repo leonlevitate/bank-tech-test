@@ -1,21 +1,7 @@
 # Bank tech test
 
-Today, you'll practice doing a tech test.
-
-For most tech tests, you'll essentially have unlimited time.  This practice session is about producing the best code you can when there is a minimal time pressure.
-
-You'll get to practice your OO design and TDD skills.
-
-You'll work alone, and you'll also review your own code so you can practice reflecting on and improving your own work.
 
 ## Specification
-
-### Requirements
-
-* You should be able to interact with your code via a REPL like IRB or the JavaScript console.  (You don't need to implement a command line interface that takes input from STDIN.)
-* Deposits, withdrawal.
-* Account statement (date, amount, balance) printing.
-* Data can be kept in memory (it doesn't need to be stored to a database or anything).
 
 ### Acceptance criteria
 
@@ -31,3 +17,22 @@ date || credit || debit || balance
 13/01/2012 || 2000.00 || || 3000.00
 10/01/2012 || 1000.00 || || 1000.00
 ```
+### How to run the program
+
+
+* git clone
+* bundle install
+* run IRB in terminal
+* require './lib/account'
+* account = Account.new
+* account.credit(1000) - deposits account with £1000
+* account.credit(2000) - deposits account with £2000
+* account.debit(500) - withdraws account with £500
+* account.view_statement - displays account statement with date, amount & balance) (inverse chronological order)
+
+### How to run tests
+
+* rspec
+
+### Screenshot of program
+![alt text](screenshot/screenshot.png?raw=true"screenshot")
