@@ -4,14 +4,15 @@ require 'bank_statement'
 
 RSpec.describe BankStatement do
   let(:bank_statement) { BankStatement.new }
+  let(:date) { Time.now.strftime('%d/%m/%Y') }
 
   it 'generates a bank statement with formatting' do
-    statement = [{ date: '30/07/2019', credit: 2000, debit: nil, balance: 2000 },
-                 { date: '30/07/2019', credit: nil, debit: 100, balance: 1900 },
-                 { date: '30/07/2019', credit: 400, debit: nil, balance: 2300 }]
-    expect(bank_statement.create_statement(statement)).to eq [{ date: '30/07/2019', credit: 2000, debit: nil, balance: 2000 },
-                                                              { date: '30/07/2019', credit: nil, debit: 100, balance: 1900 },
-                                                              { date: '30/07/2019', credit: 400, debit: nil, balance: 2300 }]
+    statement = [{ date: date, credit: 2000, debit: nil, balance: 2000 },
+                 { date: date, credit: nil, debit: 100, balance: 1900 },
+                 { date: date, credit: 400, debit: nil, balance: 2300 }]
+    expect(bank_statement.create_statement(statement)).to eq [{ date: date, credit: 2000, debit: nil, balance: 2000 },
+                                                              { date: date, credit: nil, debit: 100, balance: 1900 },
+                                                              { date: date, credit: 400, debit: nil, balance: 2300 }]
   end
 
   it 'creates a bank statement' do
