@@ -5,7 +5,6 @@ require 'bank_statement'
 
 RSpec.describe Account do
   let(:account) { Account.new }
-  let(:bank_statement) {double :BankStatement}
 
   it 'increases the balance when a deposit is made' do
     account.credit(2000)
